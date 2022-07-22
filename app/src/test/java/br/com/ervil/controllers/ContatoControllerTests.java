@@ -71,6 +71,15 @@ public class ContatoControllerTests {
 	}
 
 	@Test
+	public void retrieveAndReturnNull() throws Exception {
+		Integer codigo = 1;
+		Mockito.when(contatoRepository.findById(codigo)).thenReturn(Optional.empty());
+		mockMvc.perform(
+				MockMvcRequestBuilders.get("/api/v1/contatos/{codigo}", codigo).accept(MediaType.APPLICATION_JSON))
+				.andDo(print()).andExpect(status().isNotFound());
+	}
+
+	@Test
 	public void update() throws Exception {
 		Integer codigo = 1;
 		Contato beltrano = getContatoBeltrano();
