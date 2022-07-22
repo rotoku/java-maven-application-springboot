@@ -10,10 +10,11 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.ervil</groupId>
-	<artifactId>java-maven-11</artifactId>
+	<artifactId>java-maven-application-springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>java-maven-11</name>
-	<description>Demo project for Spring Boot</description>
+	<name>java-maven-application-springboot</name>
+	<description>Aplicação em Java com Build em Maven e Framework Spring Boot</description>
+
 	<properties>
 		<java.version>11</java.version>
 		<springfox.swagger.version>2.9.2</springfox.swagger.version>
